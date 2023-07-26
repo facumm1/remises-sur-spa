@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Box, Container, Typography, makeStyles } from '@mui/material';
+import pageColors from './styles/pageColors';
+import { TarifasPage } from './pages/TarifasPage';
+import { NosotrosPage } from './pages/NosotrosPage';
+
+/* const useStyles = makeStyles(theme => ({
+  gridItem: {
+    border: '1px solid #ccc', // Estilo de borde deseado
+    padding: theme.spacing(1),
+  },
+})); */
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Container
+      maxWidth="lg"
+      disableGutters
+      sx={{ padding: 0, backgroundColor: pageColors.white }}
+    >
+      <Box maxWidth="sm" sx={{ margin: 0, backgroundColor: pageColors.white }}>
+        <Typography variant="h1" sx={{ fontSize: '36px', textAlign: 'center' }}>
+          Remises Del Sur
+        </Typography>
+
+        <TarifasPage />
+
+        <NosotrosPage />
+      </Box>
+    </Container>
+  );
 }
 
-export default App
+export default App;
