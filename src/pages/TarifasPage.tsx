@@ -5,7 +5,12 @@ export const TarifasPage: React.FC = () => {
   return (
     <Container
       maxWidth="sm"
-      sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      sx={{
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
     >
       <Typography
         variant="h3"

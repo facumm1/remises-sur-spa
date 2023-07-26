@@ -1,7 +1,9 @@
-import { Box, Container, Typography, makeStyles } from '@mui/material';
+import { Container, makeStyles } from '@mui/material';
 import pageColors from './styles/pageColors';
 import { TarifasPage } from './pages/TarifasPage';
 import { NosotrosPage } from './pages/NosotrosPage';
+import { ContactoPage } from './pages/ContactoPage';
+import { InicioPage } from './pages/InicioPage';
 
 /* const useStyles = makeStyles(theme => ({
   gridItem: {
@@ -13,19 +15,13 @@ import { NosotrosPage } from './pages/NosotrosPage';
 function App() {
   return (
     <Container
-      maxWidth="lg"
-      disableGutters
-      sx={{ padding: 0, backgroundColor: pageColors.white }}
+      maxWidth="sm"
+      sx={{ margin: 0, padding: 0, backgroundColor: pageColors.white }}
     >
-      <Box maxWidth="sm" sx={{ margin: 0, backgroundColor: pageColors.white }}>
-        <Typography variant="h1" sx={{ fontSize: '36px', textAlign: 'center' }}>
-          Remises Del Sur
-        </Typography>
-
-        <TarifasPage />
-
-        <NosotrosPage />
-      </Box>
+      <InicioPage />
+      <TarifasPage />
+      <NosotrosPage />
+      <ContactoPage />
     </Container>
   );
 }
