@@ -2,8 +2,9 @@ import { Container, makeStyles } from '@mui/material';
 import pageColors from './styles/pageColors';
 import { TarifasPage } from './pages/TarifasPage';
 import { NosotrosPage } from './pages/NosotrosPage';
-import { ContactoPage } from './pages/ContactoPage';
+import { WhatsappPage } from './pages/WhatsappPage';
 import { InicioPage } from './pages/InicioPage';
+import { ContactoPage } from './pages/ContactoPage';
 
 /* const useStyles = makeStyles(theme => ({
   gridItem: {
@@ -21,6 +22,7 @@ function App() {
       <InicioPage />
       <TarifasPage />
       <NosotrosPage />
+      <WhatsappPage />
       <ContactoPage />
     </Container>
   );

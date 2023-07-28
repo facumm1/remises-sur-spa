@@ -7,14 +7,32 @@ export const GridTarifas: React.FC = () => {
   return (
     <Grid
       container
-      rowSpacing={1}
+      rowSpacing={2}
       //columnSpacing={{ xs: 1, sm: 2, md: 3 }}
     >
       <Grid item xs={6} sx={{ backgroundColor: pageColors.darkBlue }}>
-        <Typography sx={{ color: pageColors.white }}>Viaje</Typography>
+        <Typography
+          sx={{
+            fontSize: '18px',
+            color: pageColors.white,
+            textAlign: 'center',
+            paddingBottom: '10px',
+          }}
+        >
+          Viaje
+        </Typography>
       </Grid>
       <Grid item xs={6} sx={{ backgroundColor: pageColors.darkBlue }}>
-        <Typography sx={{ color: pageColors.white }}>Costo</Typography>
+        <Typography
+          sx={{
+            fontSize: '18px',
+            color: pageColors.white,
+            textAlign: 'center',
+            paddingBottom: '10px',
+          }}
+        >
+          Costo
+        </Typography>
       </Grid>
 
       {viajesMock.map(({ destino, tarifa }, index) => (
@@ -26,6 +44,7 @@ export const GridTarifas: React.FC = () => {
               backgroundColor: index % 2 ? 'inherit' : pageColors.gridWhite,
               border: '.5px solid #000',
               padding: 0,
+              textAlign: 'center',
             }}
           >
             <Typography>{destino}</Typography>
@@ -37,6 +56,7 @@ export const GridTarifas: React.FC = () => {
               backgroundColor: index % 2 ? 'inherit' : pageColors.gridWhite,
               border: '.5px solid #000',
               padding: 0,
+              textAlign: 'center',
             }}
           >
             <Typography>${tarifa}</Typography>

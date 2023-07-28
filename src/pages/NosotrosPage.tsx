@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material';
+import { Avatar, Container, Typography } from '@mui/material';
 import React from 'react';
 import pageColors from '../styles/pageColors';
 
@@ -7,18 +7,30 @@ export const NosotrosPage: React.FC = () => {
     <Container
       maxWidth="sm"
       sx={{
-        height: '100vh',
+        minHeight: '100vh',
         backgroundColor: pageColors.darkBlue,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
       }}
     >
+      <Avatar
+        src="https://fundeu.fiile.org.ar/library/timthumb/timthumb.php?src=/uploadsfotos/remis_02.jpg&w=720"
+        sx={{ width: 300, height: 300, margin: '20px 0 20px 0' }}
+      />
+
       <Typography variant="h5" component="h3" sx={{ color: pageColors.white }}>
         Acerca de nosotros
       </Typography>
 
-      <Typography variant="body1" sx={{ color: pageColors.white }}>
+      <Typography
+        variant="body1"
+        sx={{
+          color: pageColors.white,
+          margin: '20px 0 20px 0',
+          textAlign: 'center',
+        }}
+      >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
         quisquam a dicta corrupti! Dolorum eligendi nesciunt natus pariatur.
         Minima sit ut reiciendis nesciunt ullam aliquid nostrum non suscipit
