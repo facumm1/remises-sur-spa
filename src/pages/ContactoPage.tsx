@@ -29,7 +29,7 @@ export const ContactoPage: React.FC = () => {
       maxWidth="sm"
       sx={{
         minheight: '100vh',
-        backgroundColor: pageColors.darkBlue,
+        backgroundColor: pageColors.white,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -38,7 +38,7 @@ export const ContactoPage: React.FC = () => {
       <Typography
         variant="h5"
         component="h3"
-        sx={{ color: pageColors.white, margin: '20px 0 15px 0' }}
+        sx={{ color: pageColors.darkBlue, margin: '20px 0 15px 0' }}
       >
         Haga su reserva
       </Typography>
@@ -100,7 +100,7 @@ export const ContactoPage: React.FC = () => {
           color="primary"
           sx={{
             margin: '20px auto 50px auto',
-            backgroundColor: pageColors.veryDarkBlue,
+            backgroundColor: pageColors.red,
             paddingLeft: '25px',
             paddingRight: '25px',
             width: '100%',

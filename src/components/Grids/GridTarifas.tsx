@@ -10,7 +10,11 @@ export const GridTarifas: React.FC = () => {
       rowSpacing={2}
       //columnSpacing={{ xs: 1, sm: 2, md: 3 }}
     >
-      <Grid item xs={6} sx={{ backgroundColor: pageColors.darkBlue }}>
+      <Grid
+        item
+        xs={6}
+        sx={{ backgroundColor: pageColors.red, paddingTop: 0 }}
+      >
         <Typography
           sx={{
             fontSize: '18px',
@@ -19,10 +23,10 @@ export const GridTarifas: React.FC = () => {
             paddingBottom: '10px',
           }}
         >
-          Viaje
+          Destino
         </Typography>
       </Grid>
-      <Grid item xs={6} sx={{ backgroundColor: pageColors.darkBlue }}>
+      <Grid item xs={6} sx={{ backgroundColor: pageColors.red }}>
         <Typography
           sx={{
             fontSize: '18px',
@@ -41,7 +45,8 @@ export const GridTarifas: React.FC = () => {
             item
             xs={6}
             sx={{
-              backgroundColor: index % 2 ? 'inherit' : pageColors.gridWhite,
+              backgroundColor:
+                index % 2 ? pageColors.white : pageColors.gridWhite,
               border: '.5px solid #000',
               padding: 0,
               textAlign: 'center',
@@ -53,7 +58,8 @@ export const GridTarifas: React.FC = () => {
             item
             xs={6}
             sx={{
-              backgroundColor: index % 2 ? 'inherit' : pageColors.gridWhite,
+              backgroundColor:
+                index % 2 ? pageColors.white : pageColors.gridWhite,
               border: '.5px solid #000',
               padding: 0,
               textAlign: 'center',

@@ -1,36 +1,18 @@
-import { Avatar, Container, Typography } from '@mui/material';
 import React from 'react';
+import { Avatar, Container, Typography } from '@mui/material';
 import pageColors from '../styles/pageColors';
+import imgMock from '../util/imgMock';
 
 export const NosotrosPage: React.FC = () => {
   return (
-    <Container
-      maxWidth="sm"
-      sx={{
-        minHeight: '100vh',
-        backgroundColor: pageColors.darkBlue,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
-    >
-      <Avatar
-        src="https://fundeu.fiile.org.ar/library/timthumb/timthumb.php?src=/uploadsfotos/remis_02.jpg&w=720"
-        sx={{ width: 300, height: 300, margin: '20px 0 20px 0' }}
-      />
+    <Container maxWidth="sm" sx={styles.container}>
+      <Avatar src={imgMock.nosotros} sx={styles.avatar} />
 
-      <Typography variant="h5" component="h3" sx={{ color: pageColors.white }}>
+      <Typography variant="h5" component="h3" sx={styles.title}>
         Acerca de nosotros
       </Typography>
 
-      <Typography
-        variant="body1"
-        sx={{
-          color: pageColors.white,
-          margin: '20px 0 20px 0',
-          textAlign: 'center',
-        }}
-      >
+      <Typography variant="body1" sx={styles.bodyText}>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
         quisquam a dicta corrupti! Dolorum eligendi nesciunt natus pariatur.
         Minima sit ut reiciendis nesciunt ullam aliquid nostrum non suscipit
@@ -45,4 +27,28 @@ export const NosotrosPage: React.FC = () => {
       </Typography>
     </Container>
   );
+};
+
+const styles = {
+  container: {
+    minHeight: '100vh',
+    backgroundColor: pageColors.white,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: '30px 0 30px 0',
+  },
+  avatar: {
+    width: 300,
+    height: 300,
+    margin: '20px 0 20px 0',
+  },
+  title: {
+    color: pageColors.darkBlue,
+  },
+  bodyText: {
+    color: pageColors.darkBlue,
+    margin: '20px 0 20px 0',
+    textAlign: 'center',
+  },
 };

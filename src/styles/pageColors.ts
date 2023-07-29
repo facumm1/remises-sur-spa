@@ -1,19 +1,15 @@
 type PageColorsTypes = {
-  gridWhite: string;
-  white: string;
-  veryDarkBlue: string;
   darkBlue: string;
-  blue: string;
-  lightBlue: string;
+  white: string;
+  red: string;
+  gridWhite: string;
 };
 
 const pageColors: PageColorsTypes = {
-  gridWhite: '#F0EBE8',
-  white: '#F0EBD8',
-  veryDarkBlue: '#0D1321',
-  darkBlue: '#1D2D44',
-  blue: '#3E5C76',
-  lightBlue: '#748CAB',
+  darkBlue: '#2b2d42',
+  white: '#EDF2F4',
+  red: '#bd3345',
+  gridWhite: '#e1e4e6',
 };
 
 export default pageColors;
