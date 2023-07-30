@@ -8,17 +8,7 @@ import { InicioWppButton } from '../components/Buttons/InicioWppButton';
 
 export const InicioPage: React.FC = () => {
   return (
-    <Container
-      maxWidth="sm"
-      sx={{
-        minHeight: '100vh',
-        backgroundColor: pageColors.white,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
+    <Container maxWidth="sm" sx={styles.container}>
       {/* Header Fixed */}
       <InicioHeader />
 
@@ -29,4 +19,15 @@ export const InicioPage: React.FC = () => {
       <InicioWppButton />
     </Container>
   );
+};
+
+const styles = {
+  container: {
+    minHeight: '100vh',
+    backgroundColor: pageColors.white,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 };

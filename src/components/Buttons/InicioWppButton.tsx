@@ -1,12 +1,12 @@
 import React from 'react';
-import { IconButton } from '@mui/material';
+import IconButtonMUI from './IconButtonMUI';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export const InicioWppButton: React.FC = () => {
   return (
-    <IconButton sx={styles.button}>
+    <IconButtonMUI sx={styles.button}>
       <WhatsAppIcon sx={styles.icon} />
-    </IconButton>
+    </IconButtonMUI>
   );
 };
 

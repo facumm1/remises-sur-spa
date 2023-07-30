@@ -1,11 +1,14 @@
 import { Container, ThemeProvider } from '@mui/material';
 import pageColors from './styles/pageColors';
-import { TarifasPage } from './pages/TarifasPage';
-import { NosotrosPage } from './pages/NosotrosPage';
-import { WhatsappPage } from './pages/WhatsappPage';
-import { InicioPage } from './pages/InicioPage';
-import { ContactoPage } from './pages/ContactoPage';
+
 import theme from './styles/theme';
+import {
+  ContactoPage,
+  InicioPage,
+  NosotrosPage,
+  TarifasPage,
+  WhatsappPage,
+} from './pages';
 
 function App() {
   return (
