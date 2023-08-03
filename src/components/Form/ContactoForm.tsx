@@ -33,7 +33,7 @@ const styles = {
     paddingLeft: '25px',
     paddingRight: '25px',
     width: '100%',
-    borderRadius: '7.5px',
+    borderRadius: 0,
     '&:hover': {
       backgroundColor: pageColors.red,
     },

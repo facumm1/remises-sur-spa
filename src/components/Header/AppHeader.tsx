@@ -1,14 +1,14 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@mui/material';
-import DriveEtaIcon from '@mui/icons-material/DriveEta';
+import MenuIcon from '@mui/icons-material/Menu';
 
-export const InicioHeader: React.FC = () => {
+export const AppHeader: React.FC = () => {
   return (
     <AppBar position="fixed">
       <Toolbar sx={styles.toolbar}>
-        <DriveEtaIcon color="secondary" sx={styles.icon} />
+        <MenuIcon color="secondary" sx={styles.icon} />
         <Typography color="secondary" component="h1" sx={styles.typography}>
-          Remises Del Sur
+          Remises Del Retiro SA
         </Typography>
       </Toolbar>
     </AppBar>
@@ -18,11 +18,13 @@ export const InicioHeader: React.FC = () => {
 const styles = {
   toolbar: { display: 'flex', justifyContent: 'center' },
   icon: {
+    position: 'absolute',
+    left: 15,
     fontSize: '28px',
     paddingRight: '10px',
   },
   typography: {
-    fontSize: '28px',
+    fontSize: '20px',
     textAlign: 'center',
   },
 };

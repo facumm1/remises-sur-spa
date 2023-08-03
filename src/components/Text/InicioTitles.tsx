@@ -1,19 +1,19 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-export const InicioContent: React.FC = () => {
+export const InicioTitles: React.FC = () => {
   return (
     <Box sx={styles.container}>
       <Typography variant="body1" sx={styles.title}>
-        Remises del Sur
+        Remises del Retiro SA
       </Typography>
 
       <Typography variant="body1" sx={styles.subtitle}>
-        Parque Comercial Avellaneda
+        Servicio de remises en CABA y alrededores
       </Typography>
 
       <Typography variant="body1" sx={styles.text}>
-        Servicio De Remises en Avellaneda y Alrededores
+        Abierto 24hrs
       </Typography>
     </Box>
   );
@@ -21,23 +21,28 @@ export const InicioContent: React.FC = () => {
 
 const styles = {
   container: {
+    alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    marginBottom: '50px',
   },
   title: {
     color: 'primary',
-    fontSize: '32px',
+    fontSize: '28px',
+    fontWeight: '300',
+    marginBottom: '16px',
     textAlign: 'center',
   },
   subtitle: {
     color: 'primary',
-    fontSize: '24px',
+    fontSize: '18px',
+    fontWeight:'100',
     textAlign: 'center',
   },
   text: {
     color: 'inherit',
     fontSize: '16px',
+    fontWeight: '100',
     textAlign: 'center',
   },
 };

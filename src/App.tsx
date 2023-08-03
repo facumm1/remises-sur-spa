@@ -1,28 +1,12 @@
-import { Container, ThemeProvider } from '@mui/material';
-import pageColors from './styles/pageColors';
+import { ThemeProvider } from '@mui/material';
 
 import theme from './styles/theme';
-import {
-  ContactoPage,
-  InicioPage,
-  NosotrosPage,
-  TarifasPage,
-  WhatsappPage,
-} from './pages';
+import { InicioPage } from './pages';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Container
-        maxWidth="sm"
-        sx={{ margin: 0, padding: 0, backgroundColor: pageColors.white }}
-      >
-        <InicioPage />
-        <TarifasPage />
-        <NosotrosPage />
-        <WhatsappPage />
-        <ContactoPage />
-      </Container>
+      <InicioPage />
     </ThemeProvider>
   );
 }

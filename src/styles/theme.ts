@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import pageColors from './pageColors';
+import '../styles/fonts.css';
 
 const theme = createTheme({
   palette: {
@@ -10,9 +11,17 @@ const theme = createTheme({
       main: pageColors.white,
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1920,
+    },
+  },
   typography: {
-    fontFamily: 'Arial, sans-serif',
-    fontSize: 16,
+    fontFamily: 'Lato, sans-serif',
   },
 });
 
