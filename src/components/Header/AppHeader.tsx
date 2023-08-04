@@ -1,12 +1,22 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import AppDrawer from '../Drawer/AppDrawer';
+import useToggle from '../../hooks/useToggle';
+import IconButtonMUI from '../Buttons/IconButtonMUI';
 
 export const AppHeader: React.FC = () => {
+  const { open, handleOpen } = useToggle();
+
   return (
     <AppBar position="fixed">
+      <AppDrawer open={open} handleOpen={handleOpen} />
+
       <Toolbar sx={styles.toolbar}>
-        <MenuIcon color="secondary" sx={styles.icon} />
+        <IconButtonMUI sx={styles.icon} handleClick={handleOpen}>
+          <MenuIcon color="secondary" />
+        </IconButtonMUI>
+
         <Typography color="secondary" component="h1" sx={styles.typography}>
           Remises Del Retiro SA
         </Typography>

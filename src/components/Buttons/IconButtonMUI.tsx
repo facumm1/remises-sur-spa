@@ -4,11 +4,16 @@ import { Theme } from '@emotion/react';
 
 type Props = {
   children: React.ReactNode;
-  sx: SxProps<Theme>;
+  sx?: SxProps<Theme>;
+  handleClick: (e: React.MouseEvent) => void;
 };
 
-const IconButtonMUI: React.FC<Props> = ({ children, sx }) => {
-  return <IconButton sx={sx}>{children}</IconButton>;
+const IconButtonMUI: React.FC<Props> = ({ children, sx, handleClick }) => {
+  return (
+    <IconButton sx={sx} onClick={handleClick}>
+      {children}
+    </IconButton>
+  );
 };
 
 export default IconButtonMUI;
