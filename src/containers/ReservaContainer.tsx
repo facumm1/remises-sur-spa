@@ -2,22 +2,22 @@ import React from 'react';
 import { Container, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import pageColors from '../styles/pageColors';
-import { ContactoForm } from '../components/Form/ContactoForm';
+import { ContactForm } from '../components/Form/ContactForm';
 
 export const ReservaContainer: React.FC = () => {
   const { handleSubmit, control } = useForm();
 
   const onSubmit = data => {
-    console.log(data);
+    alert(JSON.stringify(data, null, 3));
   };
 
   return (
-    <Container maxWidth="sm" sx={styles.container}>
+    <Container id="reservar-viaje" maxWidth="sm" sx={styles.container}>
       <Typography variant="h5" component="h3" sx={styles.typography}>
         Reservar un viaje
       </Typography>
 
-      <ContactoForm handleSubmit={handleSubmit(onSubmit)} control={control} />
+      <ContactForm handleSubmit={handleSubmit(onSubmit)} control={control} />
     </Container>
   );
 };

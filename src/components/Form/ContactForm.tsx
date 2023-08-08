@@ -2,17 +2,17 @@ import React from 'react';
 import { Button } from '@mui/material';
 import { Control } from 'react-hook-form';
 import pageColors from '../../styles/pageColors';
-import { ContactoController } from './ContactoController';
+import { ContactController } from './ContactController';
 
 type Props = {
   handleSubmit: () => void;
   control: Control;
 };
 
-export const ContactoForm: React.FC<Props> = ({ handleSubmit, control }) => {
+export const ContactForm: React.FC<Props> = ({ handleSubmit, control }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <ContactoController control={control} />
+      <ContactController control={control} />
 
       <Button
         type="submit"

@@ -1,22 +1,18 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import IconButtonMUI from './IconButtonMUI';
 import pageColors from '../../styles/pageColors';
+import { AnchorButton } from './AnchorButton';
 
 export const InicioBtns: React.FC = () => {
   return (
     <Box sx={{ display: 'flex' }}>
-      <IconButtonMUI sx={styles.tarifasBtn}>
-        <Typography sx={{ color: pageColors.white, padding: '0 2.5px' }}>
-          Ver tarifas
-        </Typography>
-      </IconButtonMUI>
+      <AnchorButton sx={styles.tarifasBtn} to="tarifas">
+        <Typography sx={styles.tarifasTxt}>Ver tarifas</Typography>
+      </AnchorButton>
 
-      <IconButtonMUI sx={styles.reservarBtn}>
-        <Typography sx={{ color: pageColors.white, padding: '0 7.5px' }}>
-          Reservar un viaje
-        </Typography>
-      </IconButtonMUI>
+      <AnchorButton sx={styles.reservarBtn} to="reservar-viaje">
+        <Typography sx={styles.reservarTxt}>Reservar viaje</Typography>
+      </AnchorButton>
     </Box>
   );
 };
@@ -25,7 +21,7 @@ const styles = {
   tarifasBtn: {
     backgroundColor: pageColors.red,
     borderRadius: 0,
-    padding: '10px 20px',
+    padding: '10px 12px',
     marginRight: '7.5px',
     '&: hover': {
       backgroundColor: pageColors.activeRed,
@@ -36,6 +32,7 @@ const styles = {
   },
   reservarBtn: {
     backgroundColor: pageColors.darkBlue,
+    padding: '10px 12px',
     borderRadius: 0,
     '&: hover': {
       backgroundColor: pageColors.darkBlue,
@@ -44,4 +41,9 @@ const styles = {
       backgroundColor: pageColors.darkBlue,
     },
   },
+  tarifasTxt: {
+    color: pageColors.white,
+    padding: '0 2.5px',
+  },
+  reservarTxt: { color: pageColors.white, padding: '0 7.5px' },
 };

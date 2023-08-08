@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Container, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { GridTarifas } from '../components/Grids/GridTarifas';
 import pageColors from '../styles/pageColors';
+import { AnchorButton } from '../components/Buttons/AnchorButton';
 
 export const TarifasContainer: React.FC = () => {
   return (
-    <Container maxWidth="xl" sx={styles.container}>
+    <Container id="tarifas" maxWidth="xl" sx={styles.container}>
       <Container maxWidth="md" sx={styles.contentContainer}>
         <Typography variant="h3" color="secondary" sx={styles.pageTitle}>
           Tarifas
@@ -13,9 +14,9 @@ export const TarifasContainer: React.FC = () => {
 
         <GridTarifas />
 
-        <Button variant="text" color="secondary" sx={styles.button}>
-          Haga su reserva aquí
-        </Button>
+        <AnchorButton sx={styles.button} to="reservar-viaje">
+          <Typography sx={styles.txtButton}>Haga su reserva aquí</Typography>
+        </AnchorButton>
       </Container>
     </Container>
   );
@@ -51,5 +52,14 @@ const styles = {
     paddingLeft: '30px',
     paddingRight: '30px',
     borderRadius: 0,
+    '&: hover': {
+      backgroundColor: pageColors.red,
+    },
+    '&: active': {
+      backgroundColor: pageColors.red,
+    },
+  },
+  txtButton: {
+    color: pageColors.white,
   },
 };

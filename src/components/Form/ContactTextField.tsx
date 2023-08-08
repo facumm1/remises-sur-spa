@@ -18,7 +18,7 @@ const messageSize: { minRows: number; maxRows: number } = {
   maxRows: 10,
 };
 
-export const ContactoTextField: React.FC<Props> = ({
+export const ContactTextField: React.FC<Props> = ({
   field,
   fieldState,
   label,
