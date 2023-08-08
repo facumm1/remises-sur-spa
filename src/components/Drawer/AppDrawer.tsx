@@ -5,7 +5,7 @@ import { HookTypes } from '../../hooks/useToggle';
 
 const AppDrawer: React.FC<HookTypes> = ({ open, handleOpen }) => {
   return (
-    <Drawer anchor={'left'} open={open} onClose={handleOpen}>
+    <Drawer anchor={'right'} open={open} onClose={handleOpen}>
       <HamburgerMenu handleOpen={handleOpen} />
     </Drawer>
   );

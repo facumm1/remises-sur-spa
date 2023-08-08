@@ -8,7 +8,7 @@ import pageColors from '../../styles/pageColors';
 export const AppFooter: React.FC = () => {
   return (
     <Box sx={styles.box}>
-      <Typography sx={styles.autor}>facumm1 - Web Development</Typography>
+      <Typography sx={styles.autor}>facumm1 - Desarrollo web</Typography>
 
       <Box>
         <IconButtonMUI sx={{}}>
