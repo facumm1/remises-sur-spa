@@ -50,7 +50,7 @@ export const textFieldLabels: TextFieldLabel[] = [
       value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
       message: 'Ingrese un email válido',
     },
-    rules: { minLength: 5, maxLength: 15 },
+    rules: { minLength: 5, maxLength: 50 },
   },
   {
     label: 'Mensaje',
