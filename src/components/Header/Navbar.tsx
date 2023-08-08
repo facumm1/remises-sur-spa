@@ -10,11 +10,11 @@ type Props = {
 
 export const Navbar: React.FC<Props> = ({ isDesktopView, handleOpen }) => {
   return isDesktopView ? (
+    <DesktopMenu />
+  ) : (
     <IconButtonMUI sx={styles.icon} handleClick={handleOpen}>
       <MenuIcon color="secondary" />
     </IconButtonMUI>
-  ) : (
-    <DesktopMenu />
   );
 };
 

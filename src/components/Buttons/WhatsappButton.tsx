@@ -2,7 +2,7 @@ import React from 'react';
 import IconButtonMUI from './IconButtonMUI';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-export const InicioWppButton: React.FC = () => {
+export const WhatsappButton: React.FC = () => {
   return (
     <IconButtonMUI sx={styles.button}>
       <WhatsAppIcon sx={styles.icon} />
