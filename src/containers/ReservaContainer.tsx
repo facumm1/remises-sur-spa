@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
-import { useForm } from 'react-hook-form';
+import { FieldValues, useForm } from 'react-hook-form';
 import pageColors from '../styles/pageColors';
 import { ContactForm } from '../components/Form/ContactForm';
 
 export const ReservaContainer: React.FC = () => {
   const { handleSubmit, control } = useForm();
 
-  const onSubmit = data => {
+  const onSubmit = (data: FieldValues) => {
+    console.log(JSON.stringify(data, null, 3));
     alert(JSON.stringify(data, null, 3));
   };
 
